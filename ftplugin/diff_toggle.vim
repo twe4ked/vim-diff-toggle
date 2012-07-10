@@ -2,18 +2,26 @@
 " Homepage: http://github.com/twe4ked/vim-diff-toggle
 
 function! s:ToggleDiff()
-  let line = getline('.')
-  let first_character = strpart(line, 0, 1)
+  let lnum = line('.')
+  for i in range(v:count1)
+    let line = getline(lnum)
+    let first_character = strpart(line, 0, 1)
 
-  if first_character == '-'
-    call setline('.', substitute(line, '^-', ' ', ''))
-  elseif first_character == ' '
-    call setline('.', substitute(line, '^ ', '-', ''))
-  elseif first_character == '+'
-    delete _
-  else
-    execute 'normal! \<Esc>'
-  endif
+    if first_character == '-'
+      call setline(lnum, substitute(line, '^-', ' ', ''))
+      let lnum += 1
+    elseif first_character == ' '
+      call setline(lnum, substitute(line, '^ ', '-', ''))
+      let lnum += 1
+    elseif first_character == '+'
+      execute lnum . 'delete _'
+    else
+      execute 'normal! \<Esc>'
+      break
+    endif
+  endfor
+
+  call cursor(lnum, 1)
 endfunction
 
-nnoremap <silent> <buffer> <Space> :call <SID>ToggleDiff()<CR>
+nnoremap <silent> <buffer> <Space> :<C-u>call <SID>ToggleDiff()<CR>
