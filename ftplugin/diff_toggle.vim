@@ -6,15 +6,14 @@ function! s:ToggleDiff()
   let first_character = strpart(line, 0, 1)
 
   if first_character == '-'
-    let repl = substitute(line, '^-', ' ', '')
+    call setline('.', substitute(line, '^-', ' ', ''))
   elseif first_character == ' '
-    let repl = substitute(line, '^ ', '-', '')
+    call setline('.', substitute(line, '^ ', '-', ''))
+  elseif first_character == '+'
+    delete _
   else
-    let repl = line
     execute 'normal! \<Esc>'
   endif
-
-  call setline('.', repl)
 endfunction
 
 nnoremap <silent> <buffer> <Space> :call <SID>ToggleDiff()<CR>
