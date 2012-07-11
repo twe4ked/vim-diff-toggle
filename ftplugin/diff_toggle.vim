@@ -21,7 +21,7 @@ function! s:ToggleDiff( count )
     endif
   endfor
 
-  call cursor(lnum, 1)
+  call cursor(lnum)
 endfunction
 
 nnoremap <silent> <buffer> <Space> :<C-u>call <SID>ToggleDiff(v:count1)<CR>
