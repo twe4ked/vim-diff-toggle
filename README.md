@@ -16,8 +16,11 @@ Git with `git add --edit`.
 
 #### Contributors
 
-Thanks to [Jason Weathered](http://jasoncodes.com) and
-[Nathanael Kane](http://twitter.com/nathanaelkane).
+Thanks.
+
+* [Jason Weathered](http://jasoncodes.com)
+* [Nathanael Kane](http://twitter.com/nathanaelkane)
+* [Ingo Karkat](https://github.com/inkarkat)
 
 #### License
 
