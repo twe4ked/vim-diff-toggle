@@ -20,8 +20,6 @@ function! s:ToggleDiff( count )
       break
     endif
   endfor
-
-  call cursor(lnum)
 endfunction
 
 nnoremap <silent> <buffer> <Space> :<C-u>call <SID>ToggleDiff(v:count1)<CR>
