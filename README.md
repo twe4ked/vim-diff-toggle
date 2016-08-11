@@ -25,3 +25,7 @@ Thanks.
 #### License
 
 Distributed under the same terms as Vim itself. See `:help license` for info.
+
+#### Links
+
+* http://usevim.com/2012/03/26/plugin-roundup/
