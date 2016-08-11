@@ -1,5 +1,5 @@
 Diff Toggle
------------
+===========
 
 Diff Toggle is a Vim plugin to speed up editing diff files.
 
@@ -14,7 +14,8 @@ Pressing `<Space>` in diff buffers on a single line or visual selection will:
 What is this useful for you ask? Try use it next time you are adding files to
 Git with `git add --edit`.
 
-#### Contributors
+Contributors
+------------
 
 Thanks.
 
@@ -22,10 +23,12 @@ Thanks.
 * [Nathanael Kane](http://twitter.com/nathanaelkane)
 * [Ingo Karkat](https://github.com/inkarkat)
 
-#### License
+License
+-------
 
 Distributed under the same terms as Vim itself. See `:help license` for info.
 
-#### Links
+Links
+-----
 
 * http://usevim.com/2012/03/26/plugin-roundup/
